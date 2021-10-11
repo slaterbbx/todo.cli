@@ -1,3 +1,8 @@
-Debug
-Binaries
+# folders
+/Debug/
+/Binaries/
 /Release/
+
+# files
+yet.todo
+done.todo
