@@ -3,7 +3,9 @@
 #include <filesystem>
 #include "DataHandler.h"
 
+// ### WORKER FUNCTIONS ### //
 // Worker function used by DataHandler::FileAuthenticator to check file existence
+// ! If no file exists, one is created empty
 bool fileExists(const char* fileName){
 
 	if(std::filesystem::exists(fileName)){
@@ -11,32 +13,17 @@ bool fileExists(const char* fileName){
 		return true;
 	}
 
-	std::cout << "File does not exist, we shall create one" << std::endl;
+	std::ofstream createFile (fileName);
+	std::cout << "program file created on system '" << fileName << "'" << std::endl;
+	createFile.close();
 	return false;
 
 };
 
 int DataHandler::FileAuthenticator(){
 
-	// Open file with todo list in it, if none, create empty file.
-	if(fileExists("yet.todo")){
-		// do nothing for now
-	}else {
-		// create file with ofstream by opening it for the first time
-		std::ofstream yetTodo ("yet.todo");
-		yetTodo << "| | 1. 'get todo list cli app finished'";
-		yetTodo.close();
-	}
-
-	if(fileExists("done.todo")){
-		// do nothing for now
-	}else {
-		// create file with ofstream by opeining it for the first time
-		std::ofstream doneTodo ("done.todo");
-		doneTodo << "|x| 2. 'heat up a cup of coffee'";
-		doneTodo.close();
-	}
+	fileExists("yet.todo");
+	fileExists("done.todo");
 
 	return 0;
 }
-
