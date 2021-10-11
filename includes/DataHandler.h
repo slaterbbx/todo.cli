@@ -10,7 +10,7 @@ public:
 		// * if yes
 			// return 1 to signify true and 0 for false ( file existance )
 
-	int FileAuthenticator();
+	bool FileAuthenticator(const char*);
 
 	// ------------------------------------------------
 

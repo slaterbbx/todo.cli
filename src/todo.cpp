@@ -12,7 +12,8 @@
 DataHandler Data;
 
 int main(int argc, char* argv[]) {
-	Data.FileAuthenticator();
+	Data.FileAuthenticator("yet.todo");
+	Data.FileAuthenticator("done.todo");
 	std::cout << "vader::joker" << std::endl; // prints vader::joker
 	return 0;
 }
