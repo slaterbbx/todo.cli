@@ -8,23 +8,29 @@ public:
 		// * if no
 			// - create file / fill with any needed instructions or info
 		// * if yes
-			// return 1 to signify true and 0 for false ( file existance )
+			// return true
 
 	bool FileAuthenticator(const char*);
 
 	// ------------------------------------------------
 
-	// function that parses list.todo to display it with proper spacing / alignment in terminal
+	// function that parses list.todo to display it with proper spacing / alignment in terminal ( default option )
+	// by default, on startup of app, parser will clean the file, incase of out of app edits. ie, delete spaces / empty lines
+	// function that checks off todo list items
+	// function that clears checked off items
+	// function that archives checked off items with date / timestamp in file
+	// function that clears archive file and todo list file
 
-	void FileParser();
+	void DataHandler();
 
 	// ------------------------------------------------
 
 	// function that lists todo list items
 			// # NOTE: reads and std::cout each line
 			// # NOTE: file / text formatting handled by another "parsing" function
+	// function that takes commands for date ranges to show archived todo items ( date range / specific / or all archives )
 
-	void FileReader();
+	void ListItems(); // ( -ls ) or ( -ls [1] ) "[] means optional"
 
 	// ------------------------------------------------
 
@@ -46,10 +52,20 @@ public:
 
 	// ------------------------------------------------
 
-	// function that opens list.todo file in default text editor for editing
-		// OR edit an individual item by re-writing it ( -e --edit )
+	// function that opens list.todo file in default text editor for editing ( -e --edit )
+			// - additional commands might be (
+		// OR edit an individual item by re-writing it ( todo -e 1 "then new string, todo item" )
 			// - EXAMPLE ^ : todo -e 2 warm up a cup of coffee
 
-	void EditItems();
+	void Edit();
 
 };
+
+// ### SOME THOUGHTS FOR GUI VERSION ### ///
+//
+//           CONSIDERATIONS / *
+//
+// #################################### ///
+
+// sync local data to database, use local first for offline mode, then sync
+// CLI and GUI version use same data.files

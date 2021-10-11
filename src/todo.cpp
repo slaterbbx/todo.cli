@@ -1,9 +1,8 @@
 //============================================================================
-// Name        : jtdi.cpp
+// Name        : Just TODO it
 // Author      : vader::joker
 // Version     : 0.0.1
-// Copyright   : MIT
-// Description : to:do list CLI in C++
+// Description : todo list CLI in C++
 //============================================================================
 
 #include <iostream>
