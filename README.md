@@ -1,4 +1,4 @@
-![Just TODO it CLI](./assests/gitHub/gitBanner.png)
+![Just TODO it CLI](assests/gitHub/gitBanner.png)
 
 # Just TODO.cli it
 ## CLI command line todo: list app
