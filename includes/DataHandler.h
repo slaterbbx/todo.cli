@@ -6,11 +6,11 @@ public:
 
 	// function that checks file existance ( list.todo )
 		// * if no
-			// - create file / fill with any needed instructions or info
+			// - create file
 		// * if yes
 			// return true
 
-	bool FileAuthenticator(const char*);
+	bool FileAuthenticator(const char*); // COMPLETED FUNCTIONALITY
 
 	// ------------------------------------------------
 
@@ -25,7 +25,9 @@ public:
 		// |-| add command to purge archives based on date ranges
 		// |-| add command to allow users to turn on or off archiving ( on with 1 month limit by default )
 
-	void DataHandler();
+	// |-| FEATURE add feature to handle projects ( programming / files ) with todo syntax in them ( using comment systems )
+
+	bool DataManager(); // NOTE: this will probably be broken out into many smaller methods or a subclass altogether
 
 	// ------------------------------------------------
 
