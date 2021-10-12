@@ -14,11 +14,10 @@ int main(int argc, char* argv[]) {
 
 	if(Data.FileAuthenticator("yet.todo")){
 		std::cout << "This is because yet.todo exists" << std::endl;
+	}else {
+		std::cout << "This is because yet.todo does not exist" << std::endl;
 	};
 
-
-
-	Data.FileAuthenticator("done.todo");
 	std::cout << "vader::joker" << std::endl; // prints vader::joker
 	return 0;
 }

@@ -1,4 +1,8 @@
 
+// CMD that can be used to auto commit to git, - Think about this @later time -
+// when we have a background process setup to filewatch, option like ( $todo gitsh "git shoosh")
+// so that we can hide our file changes from the users git workflow ( reduce git cluster )
+// inotifywait -q -m -e CLOSE_WRITE --format="git commit -m 'autocommit on change' %w" file.txt | sh
 
 class DataHandler {
 
@@ -53,17 +57,20 @@ public:
 
 	// ### NEW LIST BASED ON FEATURE PLANS
 
-
-	bool FileManager(); // NOTE: this will probably be broken out into many smaller methods or a subclass altogether
+	void FileManager(int, const char*);
 
 	// ------------------------------------------------
 
 	// Init project for TODO that sets up initial folder structure and files for local todo list tracking
-	// We are using files / folder so that our lists can be organized into a project and incorporated into git tracking -
-	// we can use a "global" file set by default ( system ) / project by project basis when in a project folder
 	// NOTE: set an "override" for the in project folder scoping so that you can switch between projects from anywhere -
 	// FEATURE add option to omit TODO code from files when posting to git by passing git push through TODO app
 	// -- Makes a copy of the project / deletes comments related to TODO pushs through todo to git the copy and deletes it
+
+	// Make Directory's and Files
+	// Set innitial .config
+		// sets defaults
+		// later holds data to connect with backend
+
 
 	void TodoInit();
 
