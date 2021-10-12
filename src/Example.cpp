@@ -7,8 +7,12 @@
 // |#| ParseTest()
 // |-| this is a function / group scoped todo list item on Example.cpp "grouping" ...
 // |x| this is a completed group scoped todo list item on ParseTest() function scope "grouping"
+// | | NOTE: you can add todo list items to your files via command line by attaching to the filename then -
+// to the "grouping" designator, in this case that would be the keyword "ParseTest()"
+// ### EXAMPLE TERMINAL ENTRY
+// $todo add Example.cpp ParseTest() "| | EXAMPLE CMD: this is at test todo list item added via CMD"
 
-// The above in CMD would look similar to the following
+// The above in TERMINAL would look similar to the following
 //
 //  * Example.cpp
 //  1. |-| this is a file scoped todo list item on Example.cpp
@@ -18,6 +22,11 @@
 //			ParseTest.cpp "grouping" ( cont... )
 // 		2. |x| this is a completed group scoped todo list item on -
 //			ParseTest() function scope "grouping"
+//		@. | | NOTE: you can add todo list items to your files via -
+//			command line by attaching to the filename then -
+//			to the "grouping" designator, in this case that would -
+//			be the keyword "ParseTest()"
+//		@. | | EXAMPLE: this is at test todo list item added via CMD
 
 // NOTE: you can put |#| ParseTest() anywhere in the page, as long as it comes after the global file scope |#| ParseTest.cpp -
 // that is named exactly the same as the file, if you don't put a "global" scope, it will use the file name as default
