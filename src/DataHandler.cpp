@@ -23,7 +23,7 @@ void DataHandler::CreateFile(const char* fileName){
 	createFile.close();
 };
 
-// Checks if files exists, creates then if not, deletes files also
+// Checks if files exists, creates them if not, deletes files also
 void DataHandler::FileManager(int opt, const char* fileName){
 
 	// opt or option 1 ( create file )
@@ -42,9 +42,10 @@ void DataHandler::FileManager(int opt, const char* fileName){
 // Initializes todo project tracking files in .todo hidden folder
 void DataHandler::TodoInit(){
 
-	// Do a check for the entire validity of the default files, headers etc
+	// Do a check for the entire validity of the default files
 
 	// Check if .todo hidden folder exists in terminal location
+
 	// Create default folders and files
 
 };
