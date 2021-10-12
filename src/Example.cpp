@@ -25,7 +25,8 @@
 void ParseTest(){
 
 	// |-| add more functionality here
-	// NOTE: this will fall under any directly above |#| "grouping" designator
+	// NOTE: this will fall under any directly above |#| "grouping" designator -
+	// in this case, that would be |#| ParseTest()
 	std::cout << "This is a test file to show / test parsing of the todo CLI app" << std::endl;
 
 };
@@ -37,8 +38,10 @@ void ParseTest(){
 // | | use a dash at the end of a line if you prefer not to use word wrap like so -
 // and then you can keep your files pretty, even after a period like so. -
 // for example.
+// | | the empty box < can be used for custom spacers in your lists for example
+// | | NOTE: will come after the todo item mentioning "CMD -p or --purge" just above
 
-// Just TODO It Highlights
+// Just TODO It "Highlights"
 // "Highlights" are used to stand out in the GUI and CLI display of lists
 // FEATURE
 // FIX
@@ -64,7 +67,11 @@ void ParseTest(){
 // A "Fully loaded" todo list item might look like the following
 // |x| 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
 
-// Add option to use native IDE todo "tagging", would look like so
+// Add .config option to use native IDE todo "tagging", would look like so ( optional )
 // todo |x| 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
 // todo |x| 8j5a | RECALL | create a recall function
 // todo |x| 2s4J | FIREBASE | add testing to check firebase connection
+// Add .config option to set before or after |x| boxes.
+// |x| todo | 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
+// |x| todo | 8j5a | RECALL | create a recall function
+// |x| todo | 2s4J | FIREBASE | add testing to check firebase connection
