@@ -11,7 +11,13 @@
 DataHandler Data;
 
 int main(int argc, char* argv[]) {
-	Data.FileAuthenticator("yet.todo");
+
+	if(Data.FileAuthenticator("yet.todo")){
+		std::cout << "This is because yet.todo exists" << std::endl;
+	};
+
+
+
 	Data.FileAuthenticator("done.todo");
 	std::cout << "vader::joker" << std::endl; // prints vader::joker
 	return 0;
