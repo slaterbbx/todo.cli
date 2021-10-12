@@ -4,17 +4,22 @@ class DataHandler {
 
 public:
 
+	// this function will handle initializing a git project, commiting / pushing and pulling
+	void GitConnect();
+
 	// function that checks file existance ( list.todo )
 		// * if no
-			// - create file
+			// - return false
 		// * if yes
 			// return true
 
 	bool FileAuthenticator(const char*); // COMPLETED FUNCTIONALITY
+	void CreateFile(const char*); // SELF EXPLANITORY
+
 
 	// ------------------------------------------------
 
-	// function that parses list.todo to display it with proper spacing / alignment in terminal ( default option )
+	// function that parses lists.todo to display it with proper spacing / alignment in terminal ( default option )
 	// by default, on startup of app, parser will clean the file, incase of out of app edits. ie, delete spaces / empty lines
 	// function that checks off todo list items
 	// function that clears checked off items
@@ -26,6 +31,8 @@ public:
 		// |-| add command to allow users to turn on or off archiving ( on with 1 month limit by default )
 
 	// |-| FEATURE add feature to handle projects ( programming / files ) with todo syntax in them ( using comment systems )
+	// |-| FEATURE auto divides grouped lists into folders / files
+	// |-| IMPORTANT uses git services like github to manage lists that GUI versions also can sync to
 
 	bool DataManager(); // NOTE: this will probably be broken out into many smaller methods or a subclass altogether
 
