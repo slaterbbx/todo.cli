@@ -5,6 +5,7 @@ class DataHandler {
 public:
 
 	// this function will handle initializing a git project, commiting / pushing and pulling
+	// -- this is used for local system versions, regular git is for project TODO lists
 	// should use GIT CLI and GITHUB CLI together to log in and manage git project easily
 	void GitConnect();
 
@@ -17,6 +18,7 @@ public:
 			// return true
 
 	bool FileAuthenticator(const char*); // COMPLETED FUNCTIONALITY
+
 	void CreateFile(const char*); // SELF EXPLANITORY
 
 	// ------------------------------------------------
