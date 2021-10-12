@@ -1,6 +1,6 @@
 #include <iostream>
 
-// |#| Example.cpp
+// |#| Example.cpp, if this is not here, it is added to the list by default ( you can use custom naming )
 // |-| this is a file scoped todo list item on ParseTest.cpp
 // |x| this is a completed file scoped todo list item on ParseTest.cpp
 
@@ -19,9 +19,8 @@
 // 		2. |x| this is a completed group scoped todo list item on -
 //			ParseTest() function scope "grouping"
 
-// NOTE: you can put |#| ParseTest anywhere in the page, as long as it comes after the global file scope |#| ParseTest.cpp -
-// that is named exactly the same as the file
-// NOTE: furthermore, all of your todo list items can be anywhere in the document except the global file scope
+// NOTE: you can put |#| ParseTest() anywhere in the page, as long as it comes after the global file scope |#| ParseTest.cpp -
+// that is named exactly the same as the file, if you don't put a "global" scope, it will use the file name as default
 
 void ParseTest(){
 
