@@ -21,14 +21,18 @@ public:
 	// function that archives checked off items with date / timestamp in file
 	// function that clears archive file and todo list file
 
+		// NOTE: after a certain amount of time or quantity, divide "archive lists" into sep files in folder /archives/
+		// |-| add command to purge archives based on date ranges
+		// |-| add command to allow users to turn on or off archiving ( on with 1 month limit by default )
+
 	void DataHandler();
 
 	// ------------------------------------------------
 
-	// function that lists todo list items
+	// |x| function that lists todo list items
 			// # NOTE: reads and std::cout each line
 			// # NOTE: file / text formatting handled by another "parsing" function
-	// function that takes commands for date ranges to show archived todo items ( date range / specific / or all archives )
+	// |-| function that takes commands for date ranges to show archived todo items ( date range / specific / or all archives )
 
 	void ListItems(); // ( -ls ) or ( -ls [1] ) "[] means optional"
 
