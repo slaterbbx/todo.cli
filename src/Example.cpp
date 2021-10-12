@@ -1,18 +1,18 @@
 #include <iostream>
 
 // |#| Example.cpp, if this is not here, it is added to the list by default ( you can use custom naming )
-// |-| this is a file scoped todo list item on ParseTest.cpp
-// |x| this is a completed file scoped todo list item on ParseTest.cpp
+// |-| this is a file scoped todo list item on Example.cpp
+// |x| this is a completed file scoped todo list item on Example.cpp
 
 // |#| ParseTest()
-// |-| this is a function / group scoped todo list item on ParseTest.cpp "grouping" ...
+// |-| this is a function / group scoped todo list item on Example.cpp "grouping" ...
 // |x| this is a completed group scoped todo list item on ParseTest() function scope "grouping"
 
 // The above in CMD would look similar to the following
 //
 //  * Example.cpp
-//  1. |-| this is a file scoped todo list item on ParseTest.cpp
-//  2. |x| this is a completed file scoped todo list item on ParseTest.cpp
+//  1. |-| this is a file scoped todo list item on Example.cpp
+//  2. |x| this is a completed file scoped todo list item on Example.cpp
 // 		* ParseTest()
 // 		1. |-| this is a function / group scoped todo list item on -
 //			ParseTest.cpp "grouping" ( cont... )
@@ -31,7 +31,7 @@ void ParseTest(){
 
 };
 
-// Just TODO It Syntax
+// ### Just TODO It Syntax
 // |#| todo list item group
 // |-| todo list item ( incomplete )
 // |x| todo list item ( complete ) / can be "purged" from the file using CMD -p or --purge
@@ -41,7 +41,7 @@ void ParseTest(){
 // | | the empty box < can be used for custom spacers in your lists for example
 // | | NOTE: will come after the todo item mentioning "CMD -p or --purge" just above
 
-// Just TODO It "Highlights"
+// ### Just TODO It "Highlights"
 // "Highlights" are used to stand out in the GUI and CLI display of lists
 // FEATURE
 // FIX
@@ -50,7 +50,7 @@ void ParseTest(){
 // CUSTOM ( Using all caps, example: below )
 // |x| FIREBASE | setup connection to firebase, edit users id based on api changes
 //
-// Task identifiers
+// ### Task identifiers
 // 3d4A | four digits
 // Task identifiers look like the following when used in a file on a task
 // |-| 3d4A | this is an example todo list item in my file
@@ -64,9 +64,10 @@ void ParseTest(){
 // uploads to git and other users can run a command to see the name of the person who has -
 // taken on the role of handling that todo list item, this info will be kept in a .tskids file in the project
 
-// A "Fully loaded" todo list item might look like the following
+// ### A "Fully loaded" todo list item might look like the following
 // |x| 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
 
+// ### CONFIG OPTIONS
 // Add .config option to use native IDE todo "tagging", would look like so ( optional )
 // todo |x| 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
 // todo |x| 8j5a | RECALL | create a recall function
@@ -75,3 +76,5 @@ void ParseTest(){
 // |x| todo | 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
 // |x| todo | 8j5a | RECALL | create a recall function
 // |x| todo | 2s4J | FIREBASE | add testing to check firebase connection
+// Add .config option to sync to database services for desktop and mobile app integration / team toolset
+// Add .config option for
