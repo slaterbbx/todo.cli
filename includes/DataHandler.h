@@ -39,9 +39,9 @@ public:
 	// |x| 1A4L | function that clears checked off items ( Kyle Gallagher | Front end design | 8/29/2021 ) -
 	// continue the last line
 	// |-| function that archives checked off items with date / timestamp in file
-	// |-| function that clears archive file and todo list file
+	// |-| function that clears archive file and todo list file ( global )
 
-		// NOTE: after a certain amount of time or quantity, divide "archive lists" into sep files in folder /archives/
+		// NOTE: after a certain amount of time or quantity, divide "archive lists" into sep files in folder /archives/ ( global )
 		// |-| add command to purge archives based on date ranges
 		// |-| add command to allow users to turn on or off archiving ( on with 1 month limit by default )
 
