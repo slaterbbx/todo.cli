@@ -10,7 +10,7 @@
 
 // The above in CMD would look similar to the following
 //
-//  * ParseTest.cpp
+//  * Example.cpp
 //  1. |-| this is a file scoped todo list item on ParseTest.cpp
 //  2. |x| this is a completed file scoped todo list item on ParseTest.cpp
 // 		* ParseTest()
