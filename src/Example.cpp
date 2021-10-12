@@ -26,7 +26,7 @@
 void ParseTest(){
 
 	// |-| add more functionality here
-	// NOTE:
+	// NOTE: this will fall under any directly above |#| "grouping" designator
 	std::cout << "This is a test file to show / test parsing of the todo CLI app" << std::endl;
 
 };
@@ -64,3 +64,8 @@ void ParseTest(){
 
 // A "Fully loaded" todo list item might look like the following
 // |x| 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
+
+// Add option to use native IDE todo "tagging", would look like so
+// todo |x| 3d4A | FIREBASE | setup connection to firebase, edit users id based on api changes
+// todo |x| 8j5a | RECALL | create a recall function
+// todo |x| 2s4J | FIREBASE | add testing to check firebase connection
