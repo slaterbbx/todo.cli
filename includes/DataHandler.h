@@ -1,25 +1,14 @@
-
-// CMD that can be used to auto commit to git, - Think about this @later time -
-// when we have a background process setup to filewatch, option like ( $todo gitsh "git shoosh")
-// so that we can hide our file changes from the users git workflow ( reduce git cluster )
-// inotifywait -q -m -e CLOSE_WRITE --format="git commit -m 'autocommit on change' %w" file.txt | sh
-
 class DataHandler {
 
 public:
 
 	// method that uses GIT CLI and GH CLI to push non project based todo lists to git
 	void GitConnect();
-	// method that checks file existance ( list.todo )
-	bool FileAuthenticator(const char*);
-	// method that creates files
-	void CreateFile(const char*);
-	// method that creates and deletes files ( includes file authentication )
-	void FileManager(int, const char*);
-	// method to init todoit project
-	void TodoInit();
 
-	// ------------------------------------------------
+	// method to init todoit project
+	// set project /root to folder that you init in
+	// Initial todo list will be setup to match folder structure with file names / folder names as list groups
+	void TodoInit();
 
 	// |x| function that lists todo list items
 			// # NOTE: reads and std::cout each line
@@ -34,13 +23,26 @@ public:
 	// method that handles moving ( cmd: 'mv' ) todo list items up / down
 	void MoveItem();
 
-	// ------------------------------------------------
-
-	// function that opens list.todo file in default text editor for editing ( -e --edit )
-			// - additional commands might be (
-		// OR edit an individual item by re-writing it ( todo -e 1 "then new string, todo item" )
-			// - EXAMPLE ^ : todo -e 2 warm up a cup of coffee
+	// Can open a very specific line of a file ( line # and file location kept in lists.todo )
 	void Edit();
+
+	// - add option to watch git and purge files when they are added to git
+	// NOTE: "purge" means to remove all |x| completed tasks from a file or all project or specific list
+	void Purge();
+
+	// Used to attach one "list" "grouping" to another or a List item to another group or item
+	void Attach();
+	// used to expand out one layer as a list or an item
+	void Eject();
+
+
+	// ----------------------------------------------------------------------------------
+	// method that checks file existance ( list.todo )
+	bool FileAuthenticator(const char*);
+	// method that creates files
+	void CreateFile(const char*);
+	// method that creates and deletes, renames and moves files
+	void FileManager(int, const char*);
 
 };
 
