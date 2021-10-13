@@ -4,6 +4,7 @@
 // Version     : 0.0.1
 // Description : todo list CLI in C++
 // inotifywait -m -e CLOSE_WRITE --format="Debug/todo" Debug/ | sh
+//
 //============================================================================
 
 #include <iostream>

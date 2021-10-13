@@ -13,52 +13,93 @@ bool DataHandler::FileAuthenticator(const char* fileName){
 };
 
 
-// Creates files only, does not check if they exists
-void DataHandler::CreateFile(const char* fileName){
-	std::cout << "program file created on system '" << fileName << "'" << std::endl;
-	std::ofstream createFile (fileName);
-	createFile.close();
+// Creates files only
+void DataHandler::CreateFile(const char* fileName, int fileCheckOveride){
+	// param "fileCheckOveride" is used to allow writing over files
+	std::string confirmation = "";
+
+	// If we activate "fileOveride" then we just create the file even if it exists already
+	if(Data.FileAuthenticator(fileName) && fileCheckOveride == 1){
+		std::cout << "program file created on system '" << fileName << "'" << std::endl;
+		std::ofstream createFile (fileName);
+		createFile.close();
+
+	// else, if the file overRide is not set to yes, we first ask the user to confirm writing over the old file
+	} else if(fileCheckOveride == 0){
+		std::cout << "todo file " << fileName << " already exists, do you want to replace this file?" << std::endl;
+		std::cin >> confirmation;
+
+		// if we say yes to overRide, we change confirmation to yes and execute file replacement
+		if (confirmation == "y" || confirmation == "yes"){
+			std::cout << "program file created on system '" << fileName << "'" << std::endl;
+			std::ofstream createFile (fileName);
+			createFile.close();
+		};
+	};
 };
+
+// Creates directory's only
+void DataHandler::CreateDirectory(const char* directoryName, int directoryCheckOveride){
+	// param "fileCheckOveride" is used to allow writing over folders
+	std::string confirmation = "";
+
+	// If we activate "fileOveride" then we just create the directory even if it exists already
+	if(Data.FileAuthenticator(directoryName) && directoryCheckOveride == 1){
+		std::filesystem::create_directories(directoryName);
+		std::cout << "Directory created @ " << directoryName << std::endl;
+
+	// else, if the file overRide is not set to yes, we first ask the user to confirm writing over the old file
+	} else if(directoryCheckOveride == 0){
+		std::cout << "todo file " << directoryName << " already exists, do you want to replace this file?" << std::endl;
+		std::cin >> confirmation;
+
+		// if we say yes to overRide, we change confirmation to yes and execute file replacement
+		if (confirmation == "y" || confirmation == "yes"){
+			std::filesystem::create_directories(directoryName);
+			std::cout << "Directory created @ " << directoryName << std::endl;
+		};
+	};
+};
+
 
 // Checks if files exists, creates them if not, deletes files also
 void DataHandler::FileManager(int opt, const char* fileName){
 
-	// opt or option 1 ( create file )
-	if(opt == 1){
-		if(Data.FileAuthenticator(fileName)){
-			std::cout << "File " << fileName << " already exists" << std::endl;
-		}else {
-				Data.CreateFile(fileName);
-		};
-	}else if(opt == 0){
-		// opt or option 0 ( delete file )
+	// Handle creating / deleting / moving files and folders
 
-	}
+//				Data.CreateFile(fileName, 0);
+
 };
+
 
 // Initializes todo project tracking files in .todo hidden folder
 void DataHandler::Init(){
 
 	// Later auto put this into the .config file and allow an option to set / change default
 	const char* directoryName = ".todo";
-	const char* confirmation = "";
+	std::string confirmation = "";
 
 	if(Data.FileAuthenticator(directoryName)){
-		std::cout << "It seems there is already a project innitialized, do you want to delete your todo project and start fresh?" << std::endl;
-		std::cin << confirmation;
+
+		std::cout << "It seems there is already a project initialized, do you want to delete your todo project and start fresh?" << std::endl;
+		std::cin >> confirmation;
+
 		if(confirmation == "y" || confirmation == "yes"){
 			// removed entire .todo directory and create a new project.
+			std::cout << "Did this work?" << std::endl;
+		}else {
+			std::cout << "ok, your project is still existing in time and space" << std::endl;
 		};
 
+	} else if(!Data.FileAuthenticator(directoryName)){
+		std::cout << "Creating your project now" << std::endl;
 	};
 
 	std::cout << "---------- Method: DATAHANDLER::TODOINIT" << std::endl;
 
 	// Do a check for the entire validity of the default files
 
-	// Check if .todo hidden folder exists in terminal location
-
-	 std::filesystem::create_directories(directoryName);
+	// Check if .todo hidden folder exists in project
 
 	// Create default folders and files
 	if(Data.FileAuthenticator(".todo/lists.todo")){

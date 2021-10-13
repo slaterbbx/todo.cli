@@ -43,10 +43,15 @@ public:
 	// ----------------------------------------------------------------------------------
 	// method that checks file existance ( list.todo )
 	bool FileAuthenticator(const char*);
-	// method that creates files
-	void CreateFile(const char*);
+	// methods that create files and directorys
+	void CreateFile(const char*, int);
+	void CreateDirectory(const char*, int);
 	// method that creates and deletes, renames and moves files
 	void FileManager(int, const char*);
+
+private:
+	// we will need to change this later to make it project relative automatically using our .config file in .todo
+	std::string rootFolder = ".todo";
 
 };
 
