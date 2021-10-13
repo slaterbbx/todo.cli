@@ -3,21 +3,26 @@
 // Author      : vader::joker
 // Version     : 0.0.1
 // Description : todo list CLI in C++
+// inotifywait -m -e CLOSE_WRITE --format="Debug/todo" Debug/ | sh
 //============================================================================
 
 #include <iostream>
 #include "DataHandler.h"
 
-DataHandler Data;
+DataHandler DataHandler;
 
 int main(int argc, char* argv[]) {
 
-	if(Data.FileAuthenticator("yet.todo")){
-		std::cout << "This is because yet.todo exists" << std::endl;
+	std::cout << "-------- MAIN FUNCTION" << std::endl;
+
+	if(DataHandler.FileAuthenticator("yet.todo")){
+		std::cout << "This is because yet.todo is a file in the directory" << std::endl;
 	}else {
-		std::cout << "This is because yet.todo does not exist" << std::endl;
+		std::cout << "This is because yet.todo does not" << std::endl;
 	};
 
-	std::cout << "vader::joker" << std::endl; // prints vader::joker
+//	DataHandler.FileManager(1, "../.todo/list.todo");
+	 DataHandler.TodoInit();
+
 	return 0;
 }
