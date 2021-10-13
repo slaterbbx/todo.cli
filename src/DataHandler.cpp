@@ -1,9 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <filesystem>
 #include "DataHandler.h"
 
-DataHandler Datas;
+DataHandler Data;
 
 // Checks if files exist
 bool DataHandler::FileAuthenticator(const char* fileName){
@@ -28,10 +25,10 @@ void DataHandler::FileManager(int opt, const char* fileName){
 
 	// opt or option 1 ( create file )
 	if(opt == 1){
-		if(Datas.FileAuthenticator(fileName)){
+		if(Data.FileAuthenticator(fileName)){
 			std::cout << "File " << fileName << " already exists" << std::endl;
 		}else {
-				Datas.CreateFile(fileName);
+				Data.CreateFile(fileName);
 		};
 	}else if(opt == 0){
 		// opt or option 0 ( delete file )
@@ -40,7 +37,20 @@ void DataHandler::FileManager(int opt, const char* fileName){
 };
 
 // Initializes todo project tracking files in .todo hidden folder
-void DataHandler::TodoInit(){
+void DataHandler::Init(){
+
+	// Later auto put this into the .config file and allow an option to set / change default
+	const char* directoryName = ".todo";
+	const char* confirmation = "";
+
+	if(Data.FileAuthenticator(directoryName)){
+		std::cout << "It seems there is already a project innitialized, do you want to delete your todo project and start fresh?" << std::endl;
+		std::cin << confirmation;
+		if(confirmation == "y" || confirmation == "yes"){
+			// removed entire .todo directory and create a new project.
+		};
+
+	};
 
 	std::cout << "---------- Method: DATAHANDLER::TODOINIT" << std::endl;
 
@@ -48,12 +58,14 @@ void DataHandler::TodoInit(){
 
 	// Check if .todo hidden folder exists in terminal location
 
+	 std::filesystem::create_directories(directoryName);
+
 	// Create default folders and files
-	if(Datas.FileAuthenticator(".todo/lists.todo")){
+	if(Data.FileAuthenticator(".todo/lists.todo")){
 		std::cout << "Folder ./todo exists in the project Root folder" << std::endl;
 	}else {
 		std::cout << "Folder does not exist" << std::endl;
-		Datas.FileManager(1, ".todo/list.todo");
+		Data.FileManager(1, ".todo/list.todo");
 	};
 
 };

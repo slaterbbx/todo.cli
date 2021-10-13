@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 	};
 
 //	DataHandler.FileManager(1, "../.todo/list.todo");
-	 DataHandler.TodoInit();
+	 DataHandler.Init();
 
 	return 0;
 }

@@ -1,3 +1,7 @@
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+
 class DataHandler {
 
 public:
@@ -8,7 +12,7 @@ public:
 	// method to init todoit project
 	// set project /root to folder that you init in
 	// Initial todo list will be setup to match folder structure with file names / folder names as list groups
-	void TodoInit();
+	void Init();
 
 	// |x| function that lists todo list items
 			// # NOTE: reads and std::cout each line
