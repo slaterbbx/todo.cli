@@ -48,3 +48,26 @@
 
     C3P0r2D2 line#231 /src/DataHandler.cpp <timestamp>
     |x| FIREBASE | add testing to check firebase connection.
+
+
+
+// ------------- PROJECT BUILD FROM "GENERAL LIST" or TXT files
+
+TERMINAL: $todo init build TodoProject.txt
+or CMD: $todo build general #listID
+
+// This will build an entire folder and commented starter files for your project based on your "todo list" project planning
+
+**TodoProject
+        /src/
+            *Example.cpp
+                |#| ParseTest()
+                    |-| blah blah blah!
+                        'this is a note on the above "archive" list item'
+                        & attachements/blah_image.png
+                |#| list 2
+                    |#%| 
+                    |-| another example
+                    |-| another example
+        /includes/
+            | | no todo list items yet.
