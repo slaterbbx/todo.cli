@@ -8,22 +8,14 @@
 //============================================================================
 
 #include <iostream>
-#include "DataHandler.h"
+#include "FileManager.h"
 
-DataHandler DataHandler;
+FileManager FileManager;
 
 int main(int argc, char* argv[]) {
 
-	std::cout << "-------- MAIN FUNCTION" << std::endl;
-
-	if(DataHandler.FileAuthenticator("yet.todo")){
-		std::cout << "This is because yet.todo is a file in the directory" << std::endl;
-	}else {
-		std::cout << "This is because yet.todo does not" << std::endl;
-	};
-
-//	DataHandler.FileManager(1, "../.todo/list.todo");
-	 DataHandler.Init();
+	FileManager.CreateDirectory("testingThings");
+	FileManager.CreateDirectory("testingThings");
 
 	return 0;
 }
