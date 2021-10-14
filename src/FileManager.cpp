@@ -1,6 +1,6 @@
 #include "FileManager.h"
 
-FileManager Data;
+FileManager FileHandler;
 
 // Checks if files exist
 bool FileManager::FileAuthenticator(const char* name){
@@ -16,45 +16,63 @@ bool FileManager::FileAuthenticator(const char* name){
 // Creates files only
 void FileManager::CreateFile(const char* file){
 
-	if(Data.FileAuthenticator(file)){
-		std::cout << "program file created on system '" << file << "'" << std::endl;
-		std::ofstream createFile (file);
-		createFile.close();
+	std::ofstream createFile (file);
+	createFile.close();
+	std::cout << "file " << file << " created @" << std::endl;
 
-	};
+};
+
+// Can delete files and directories
+void FileManager::DeleteFile(const char* name){
+
+	std::filesystem::remove_all(name);
+
 };
 
 
 void FileManager::CreateDirectory(const char* dir){
 
-	if(!Data.FileAuthenticator(dir)){
 		std::filesystem::create_directories(dir);
 		std::cout << "Directory created @ " << dir << std::endl;
-	};
 };
+
+//
 
 
 // Initializes todo project tracking files in .todo hidden folder
 void FileManager::Init(){
 
-	// Later auto put this into the .config file and allow an option to set / change default
-	const char* dir = ".todo";
-	std::string confirmation = "";
+	const char* confirmation = "no";
 
-	if(Data.FileAuthenticator(dir)){
+	if(FileHandler.FileAuthenticator("./.todo")){\
 
-		std::cout << "It seems there is already a project initialized, do you want to delete your todo project and start fresh?" << std::endl;
+		std::cout << "Project already exists, would you like to delete and re-initialize? [ y / n ]" << std::endl;
 		std::cin >> confirmation;
 
-		if(confirmation == "y" || confirmation == "yes"){
-			// removed entire .todo directory and create a new project.
-			std::cout << "Did this work?" << std::endl;
-		}else {
-			std::cout << "ok, your project is still existing in time and space" << std::endl;
-		};
-
-	} else if(!Data.FileAuthenticator(dir)){
-		std::cout << "Creating your project now" << std::endl;
+		if(confirmation == "n" || confirmation == "no"){break;};
 	};
+
+	// global todo list in /global/index.todo
+	.todo
+		archive
+			|-| blah blah blah
+			|\| ./.todo/lists C3P0r2D2
+		global
+		src
+
+	// lists.todo
+	C3P0r2D2 src
+
+	// src/list.todo
+
+
+	FileHandler.FileAuthenticator(name);
+	FileHandler.CreateFile(file);
+	FileHandler.CreateDirectory(dir);
+	FileHandler.DeleteFile(name);
+
+	const char* dir
+
+
 
 };
