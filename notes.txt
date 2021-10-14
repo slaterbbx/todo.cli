@@ -1,0 +1,50 @@
+// global todo list in /global/index.todo
+
+    // this is a list that is general to the project and can take any "shape" -
+    // you can later use this to "send" todo list items into your project code
+
+    Funny thoughts
+        |-| blah blah blah
+            'this is a note on the above "archive" list item'
+            & /todo/attachements/blah_image.png
+            & /src/images/example.png
+        |\| ./.todo/lists C3P0r2D2
+    example list
+        |x| some example list item that is completed
+    list 3
+        |-| some example thats not finished yet, i guess?
+
+    ----- Project "in files using syntax" ----
+
+    **TodoProject
+        /src/
+            *Example.cpp
+                |#| ParseTest()
+                    |-| blah blah blah!
+                        'this is a note on the above "archive" list item'
+                        & attachements/blah_image.png
+                |#| list 2
+                    |#%| 
+                    |-| another example
+                    |-| another example
+        /includes/
+            | | no todo list items yet.
+
+// lists.todo // <username> is who the #id number is assigned to
+// for example CMD todo --list <username> // will list all assigned #ids
+// auto assign hash ids anyway, then when assigned, display #id
+
+    C3P0r2D2 src <username> attachments: one.png, two.png, three.excel
+    or
+    C3P0r2D2 archive
+
+// src/list.todo
+
+    C3P0r2D2 line#231 /src/DataHandler.cpp <timestamp>
+    |x| FIREBASE | add testing to check firebase connection.
+
+
+// archive/list.todo
+
+    C3P0r2D2 line#231 /src/DataHandler.cpp <timestamp>
+    |x| FIREBASE | add testing to check firebase connection.
