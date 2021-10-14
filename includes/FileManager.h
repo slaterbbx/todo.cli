@@ -2,7 +2,7 @@
 #include <fstream>
 #include <filesystem>
 
-class DataHandler {
+class FileManager {
 
 public:
 
@@ -41,13 +41,12 @@ public:
 
 
 	// ----------------------------------------------------------------------------------
-	// method that checks file existance ( list.todo )
+	// method that checks file existence ( list.todo )
 	bool FileAuthenticator(const char*);
-	// methods that create files and directorys
-	void CreateFile(const char*, int);
-	void CreateDirectory(const char*, int);
-	// method that creates and deletes, renames and moves files
-	void FileManager(int, const char*);
+	// methods that create files and directory
+	void CreateFile(const char*);
+	void DeleteFile(const char*);
+	void CreateDirectory(const char*);
 
 private:
 	// we will need to change this later to make it project relative automatically using our .config file in .todo
@@ -57,11 +56,11 @@ private:
 
 // ------------------------------------------------
 
-// |#| DataHandler.h // because this "group" title matches file name, this will be a global wrapper -
+// |#| FileManager.h // because this "group" title matches file name, this will be a global wrapper -
 // around the entire files todo list. ( auto puts all other # markers as sub categories )
-// |-| global to the DataHandler.h file
+// |-| global to the FileManager.h file
 // |#| FileManager() // displays as "group" title for todo items
-// |-| specific to the FileManager() class method of DataHandler.h file and will be organized -
+// |-| specific to the FileManager() class method of FileManager.h file and will be organized -
 // accordingly when displayed in terminal with all following tasks / todos as sub items. -
 // this will happen until the next occurrence of |#|
 
