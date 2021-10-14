@@ -40,7 +40,7 @@ void FileManager::CreateDirectory(const char* dir){
 
 
 // Initializes todo project tracking files in .todo hidden folder
-void FileManager::Init(){
+bool FileManager::Init(){
 
 	std::string confirmation = "no";
 
@@ -49,7 +49,7 @@ void FileManager::Init(){
 		std::cout << "Project already exists, would you like to delete and re-initialize? [ y / n ]" << std::endl;
 		std::cin >> confirmation;
 
-		if(confirmation == "n" || confirmation == "no"){break;};
+		if(confirmation == "n" || confirmation == "no"){return false;};
 	};
 
 
@@ -58,8 +58,8 @@ void FileManager::Init(){
 //	FileHandler.CreateDirectory(dir);
 //	FileHandler.Delete(name);
 
-	const char* dir
+//	const char* dir;
 
 
-
+	return true;
 };
