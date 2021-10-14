@@ -9,11 +9,6 @@ public:
 	// method that uses GIT CLI and GH CLI to push non project based todo lists to git
 	void GitConnect();
 
-	// method to init todoit project
-	// set project /root to folder that you init in
-	// Initial todo list will be setup to match folder structure with file names / folder names as list groups
-	void Init();
-
 	// |x| function that lists todo list items
 			// # NOTE: reads and std::cout each line
 			// # NOTE: file / text formatting handled by another "parsing" function
@@ -47,6 +42,8 @@ public:
 	void CreateFile(const char*);
 	void DeleteFile(const char*);
 	void CreateDirectory(const char*);
+
+	void Init();
 
 private:
 	// we will need to change this later to make it project relative automatically using our .config file in .todo
