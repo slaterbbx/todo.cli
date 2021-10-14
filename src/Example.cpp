@@ -44,6 +44,7 @@ void ParseTest(){
 // |#| todo list item group
 // |-| todo list item ( incomplete )
 // |x| todo list item ( complete ) / can be "purged" from the file using CMD -p or --purge
+// |*| marker to not purge from list "leave as star"
 // | | use a dash at the end of a line if you prefer not to use word wrap like so -
 // and then you can keep your files pretty, even after a period like so. -
 // for example.
