@@ -43,7 +43,7 @@ public:
 	void Delete(const char*);
 	void CreateDirectory(const char*);
 
-	void Init();
+	bool Init();
 
 private:
 	// we will need to change this later to make it project relative automatically using our .config file in .todo
