@@ -40,7 +40,7 @@ public:
 	bool FileAuthenticator(const char*);
 	// methods that create files and directory
 	void CreateFile(const char*);
-	void DeleteFile(const char*);
+	void Delete(const char*);
 	void CreateDirectory(const char*);
 
 	void Init();
