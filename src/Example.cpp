@@ -31,14 +31,25 @@
 // NOTE: you can put |#| ParseTest() anywhere in the page, as long as it comes after the global file scope |#| ParseTest.cpp -
 // that is named exactly the same as the file, if you don't put a "global" scope, it will use the file name as default
 
+
+// - |#| do not need to be closed and only one is needed per "list" as the list title, put all list items below -
+// this designator in the code, if another # ID is encountered then, all following lists items will fall into -
+// that trailing designator in the todo list, you can reorganize the order that lists show up in the CLI
+
+// ATTACHMENTS: |#%| open and close |%| these are attachments and can be attached to # ID designators for "groups" aka "lists" in todo
+// NOTE: if the name is the same as a #id then it will automatically be attached |#%| ParseTest() will be attached to |#| ParseTest() -
+// you should note! that you can name these #ids anything you want and they do not need to match with your code at all!
+// |#%| ParseTest()
+
 void ParseTest(){
 
-	// |-| add more functionality here
-	// NOTE: this will fall under any directly above |#| "grouping" designator -
-	// in this case, that would be |#| ParseTest()
-	std::cout << "This is a test file to show / test parsing of the todo CLI app" << std::endl;
+	// |#%| Cout is placeholder for attached doc
+	// note: you can attach docs or files to your lists via CLI
+	std::cout << "This is a test file to show / test parsing of the todo CLI app" << std::endl; // |%|
 
 };
+
+// |%|
 
 // ### Just TODO It Syntax
 // |#| todo list item group
@@ -49,7 +60,6 @@ void ParseTest(){
 // and then you can keep your files pretty, even after a period like so. -
 // for example.
 // | | the empty box < can be used for custom spacers in your lists for example
-// | | NOTE: will come after the todo item mentioning "CMD -p or --purge" just above
 
 // ### Just TODO It "Highlights"
 // "Highlights" are used to stand out in the GUI and CLI display of lists
@@ -87,4 +97,3 @@ void ParseTest(){
 // |x| todo | 8j5a | RECALL | create a recall function
 // |x| todo | 2s4J | FIREBASE | add testing to check firebase connection
 // Add .config option to sync to database services for desktop and mobile app integration / team toolset
-// Add .config option for
