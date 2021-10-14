@@ -8,7 +8,7 @@
             'this is a note on the above "archive" list item'
             & /todo/attachements/blah_image.png
             & /src/images/example.png
-        |\| ./.todo/lists C3P0r2D2
+        |\| ./.todo/lists.todo C3P0R2D2
     example list
         |x| some example list item that is completed
     list 3
@@ -34,19 +34,19 @@
 // for example CMD todo --list <username> // will list all assigned #ids
 // auto assign hash ids anyway, then when assigned, display #id
 
-    C3P0r2D2 src <username> attachments: one.png, two.png, three.excel
+    C3P0R2D2 src <username> attachments: one.png, two.png, three.excel
     or
-    C3P0r2D2 archive
+    C3P0R2D2 archive
 
 // src/list.todo
 
-    C3P0r2D2 line#231 /src/DataHandler.cpp <timestamp>
+    C3P0R2D2 line#231 /src/DataHandler.cpp <timestamp>
     |x| FIREBASE | add testing to check firebase connection.
 
 
 // archive/list.todo
 
-    C3P0r2D2 line#231 /src/DataHandler.cpp <timestamp>
+    C3P0R2D2 line#231 /src/DataHandler.cpp <timestamp>
     |x| FIREBASE | add testing to check firebase connection.
 
 
@@ -71,3 +71,9 @@ or CMD: $todo build general #listID
                     |-| another example
         /includes/
             | | no todo list items yet.
+
+
+
+// GLOBAL USES A DIF TYPE OF hash . simple
+// if project hash is CnCnCn
+// then "global" project hash is nCnCnC
