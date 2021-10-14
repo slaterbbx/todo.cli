@@ -42,7 +42,7 @@ void FileManager::CreateDirectory(const char* dir){
 // Initializes todo project tracking files in .todo hidden folder
 void FileManager::Init(){
 
-	const char* confirmation = "no";
+	std::string confirmation = "no";
 
 	if(FileHandler.FileAuthenticator("./.todo")){\
 
@@ -52,24 +52,11 @@ void FileManager::Init(){
 		if(confirmation == "n" || confirmation == "no"){break;};
 	};
 
-	// global todo list in /global/index.todo
-	.todo
-		archive
-			|-| blah blah blah
-			|\| ./.todo/lists C3P0r2D2
-		global
-		src
 
-	// lists.todo
-	C3P0r2D2 src
-
-	// src/list.todo
-
-
-	FileHandler.FileAuthenticator(name);
-	FileHandler.CreateFile(file);
-	FileHandler.CreateDirectory(dir);
-	FileHandler.DeleteFile(name);
+//	FileHandler.FileAuthenticator(name);
+//	FileHandler.CreateFile(file);
+//	FileHandler.CreateDirectory(dir);
+//	FileHandler.DeleteFile(name);
 
 	const char* dir
 
