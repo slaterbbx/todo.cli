@@ -23,7 +23,7 @@ void FileManager::CreateFile(const char* file){
 };
 
 // Can delete files and directories
-void FileManager::DeleteFile(const char* name){
+void FileManager::Delete(const char* name){
 
 	std::filesystem::remove_all(name);
 
@@ -56,7 +56,7 @@ void FileManager::Init(){
 //	FileHandler.FileAuthenticator(name);
 //	FileHandler.CreateFile(file);
 //	FileHandler.CreateDirectory(dir);
-//	FileHandler.DeleteFile(name);
+//	FileHandler.Delete(name);
 
 	const char* dir
 
