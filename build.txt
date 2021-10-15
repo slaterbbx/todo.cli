@@ -29,23 +29,24 @@
 - = list item ( incomplete )
 x = list item ( complete )
 & = file attachment
->> = import external files
-% = code attachment // code attachments can be viewed via CLI and GUI version of the app
+>> = import external files into project for code / project consolidation and attach to items / lists
 *& = create file in designated location with designated file name, or even clone a page from git
+#% ( open: #% , close: %) = code snipit // code snipits can be viewed via CLI and GUI version of the -
+    app and wrap code in markdown. If the name matches a #ID for a list, it will be grouped to it automatically.
 <|> = code injection: inject code from files into newly generated projects
 
 ------------- EXAMPLE PROJECT BUILD FILE -------------
 ---- NOTE: you can also build a list from the CMD / Terminal then build a project from that list
 ---- TERMINAL LIST VIEW: terminal view will be similar to the following of a list, with the exeption -
 ---- of commands as follows:
---- CMD's ---
+
 -- $todo -l -a project
 -- $todo -l -a global ( this is a default "floating" list, and can be attached to file notes / todo list items )
 -- $todo -l -a ( assumes all lists with all possible / visible fields )
 -- $todo -l -a custom list
 -- $todo -l ( assumes all / with "closed" lists and "hidden" lists both closed and hidden )
 
----- SOF ---- start of file
+---- SOF ---- start of file ----
 
 /src #Source Folder notes ( visible in CLI only )
     main.cpp
@@ -80,7 +81,7 @@ x = list item ( complete )
     - todo items / notes attached to folder ( visible in CLI only )
 
 
----- EOF ---- end of file
+---- EOF ---- end of file ----
 
 ---- NOTICE: when creating a directory you can start building todo lists associated with files or folders -
 ---- simply by trailing the folder or file name with #identifier
