@@ -77,7 +77,7 @@ private:
 	// |-| add command to purge archives based on date ranges
 	// |-| add command to allow users to turn on or off archiving ( on with 1 month limit by default )
 
-// |-| FEATURE add feature to handle projects ( programming / files ) with todo syntax in them ( using comment systems )
+// |-| FEATURE add feature to handle projects ( programming / files ) with todo markdown in them ( using comment systems )
 // |-| FEATURE auto divides grouped lists into folders / files
 // |-| IMPORTANT uses git services like github to manage lists that GUI versions also can sync to
 
