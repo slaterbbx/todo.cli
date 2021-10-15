@@ -39,11 +39,13 @@ public:
 	// method that checks file existence ( list.todo )
 	bool FileAuthenticator(const char*);
 	// methods that create files and directory
-	void CreateFile(const char*);
+	int CreateFile(const char*);
+	int CreateDirectory(const char*);
 	void Delete(const char*);
-	void CreateDirectory(const char*);
+	int ReadFile(const char*);
+	int WriteFile(const char*);
 
-	bool Init();
+	int Init();
 
 private:
 	// we will need to change this later to make it project relative automatically using our .config file in .todo
