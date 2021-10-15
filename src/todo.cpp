@@ -14,8 +14,9 @@ FileManager FileManager;
 
 int main(int argc, char* argv[]) {
 
-	FileManager.CreateDirectory("testingThings");
-	FileManager.CreateDirectory("testingThings");
+//	FileManager.CreateDirectory("testingThings");
+//	FileManager.CreateDirectory("testingThings");
+	FileManager.Init();
 
 	return 0;
 }
