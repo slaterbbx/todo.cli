@@ -79,3 +79,5 @@ or CMD: $todo build general #listID
 // GLOBAL USES A DIF TYPE OF hash . simple
 // if project hash is CnCnCn
 // then "global" project hash is nCnCnC
+
+// sh | down $1 per usr/mnth
