@@ -1,5 +1,8 @@
 ![Just TODO it CLI](gitBanner.png)
 
+### WORK IN PROGRESS
+Not yet functioning, still in the planning stages. Stay tuned.
+
 # Just TODO.cli it
 ## CLI command line todo: list app
 
