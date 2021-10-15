@@ -6,7 +6,11 @@ class FileManager {
 
 public:
 
-	// method that uses GIT CLI and GH CLI to push non project based todo lists to git
+	// method that uses git functionality as needed for a streamline git experience
+	// focus on creating a method to use a git branch to store the .todo folder in for -
+	// disconnected pushes to github, this allows us to update the hidden .git folder files automagically -
+	// so that you can simply run $git push origin todo , and all team members can pull that -
+	// branch to update the projects "todo lists"
 	void GitConnect();
 
 	// |x| function that lists todo list items
