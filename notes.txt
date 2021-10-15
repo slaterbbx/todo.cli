@@ -40,15 +40,15 @@
     or
     C3P0R2D2 archive
 
-// src/list.todo
+// .todo/src/index.todo
 
-    C3P0R2D2 line#231 /src/DataHandler.cpp <timestamp>
+    C3P0R2D2 line#231 /includes/DataHandler.h <timestamp>
     |x| FIREBASE | add testing to check firebase connection.
 
 
-// archive/list.todo
+// .todo/src/archive/index.todo
 
-    C3P0R2D2 line#231 /src/DataHandler.cpp <timestamp>
+    C3P0R2D2 line#231 /includes/DataHandler.h <timestamp>
     |x| FIREBASE | add testing to check firebase connection.
 
 
