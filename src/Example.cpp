@@ -52,7 +52,7 @@ void ParseTest(){
 
 // |%|
 
-// ### Just TODO It Syntax
+// ### Just TODO It markdown
 // |#| todo list item group
 // |-| todo list item ( incomplete )
 // |x| todo list item ( complete ) / can be "purged" from the file using CMD -p or --purge
