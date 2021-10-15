@@ -1,0 +1,117 @@
+------------- EXAMPLE GLOBAL PROJECT LIST BUILD FILE -------------
+
+// builds innitial global list from $todo init <buildfile>
+// the "global" list can be used to handle unordered project lists that do not -
+// directly need to be associated with a file of the project.
+
+# Global list title example
+    - item 1 of this list
+    x finished item on this list
+    * stared list item ( wont delete when --purge )
+        # Next list title ( list attached to a list item )
+            - example of list item 1
+            - example of list item 2
+# List Title Example
+    - List item example
+        - attached list item to list item example
+        & /images/img.png
+
+
+
+// builds starter project with injected list items from <buildfile>
+// these can be used for project "boilerplates"
+
+
+------------- KEYS -------------
+
+* = starred list item ( does not delete when --purge command run )
+# = ID' list group "Title"
+- = list item ( incomplete )
+x = list item ( complete )
+& = file attachment
+> = import external files
+% = code attachment // code attachments can be viewed via CLI and GUI version of the app
+*& = create file in designated location with designated file name, or even clone a page from git
+
+------------- EXAMPLE PROJECT BUILD FILE -------------
+---- NOTE: you can also build a list from the CMD / Terminal then build a project from that list
+
+/src #Source Folder notes
+    main.cpp
+        #Main Function
+            - Do this and then do that, don't forget this!
+            - Do some other stuff here and make sure its cool.
+            * Keep all "main" ref / file attachments here
+                & /refs/example.excel
+                *& /refs/marketingTeam/
+                    & git clone https://github.com/slaterbbx/todo.cli/blob/master/README.md
+            % Create "code" attachment ( shows code that is associated to this list group )
+    Injector.cpp
+    Seeker.cpp
+/includes #Includes Stuff
+    Injector.h
+    Seeker.h #Seeker system notes and ideas
+        - todo list note on #Seeker system notes and ideas file
+        - 
+/refs
+    > /user/Downloads/example.excel
+/librarys #Library Notes
+
+---- NOTICE: when creating a directory you can start building todo lists associated with files or folders -
+---- simply by trailing the folder or file name with #identifier
+
+------------- EXAMPLE OF main.cpp "Main Function" attachment of code -------------
+
+// |#| Main Function
+// |-| Do this and then do that, don't forget this!
+// |-| Do some other stuff here and make sure its cool.
+// |*| Keep all "main" ref / file attachments here
+//      & view attached file via CMD or @ /refs/
+
+// |%#| Main Function
+
+    int main(){
+        std::cout << "put your code here" << std::endl;
+        return 0;
+    }
+
+// |%|
+
+
+
+
+// testing 
+
+/.todo
+    lists.todo
+    /src
+        *lists.todo
+    /archive
+        *lists.todo
+    /global
+        *index.todo
+        /attachments
+
+FOLDER
+/.todo
+
+FILE
+/.todo/lists.todo
+
+FOLDER
+/.todo/src/
+FILE
+/.todo/src/lists.todo
+
+FOLDER
+/.todo/archive/
+FILE
+/.todo/archive/lists.todo
+
+FOLDER
+/.todo/global/
+FILE
+/.todo/global/index.todo
+
+FOLDER
+/.todo/global/attachments
