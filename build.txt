@@ -103,10 +103,7 @@ x = list item ( complete )
 
 // |%|
 
-
-
-
-// testing 
+------------ DEFAULT INIT BUILD ------------
 
 /.todo
     index.todo
@@ -120,22 +117,13 @@ FOLDER
 /.todo
 
 FILE
-/.todo/lists.todo
+/.todo/index.todo
 
 FOLDER
 /.todo/src/
-FILE
-/.todo/src/lists.todo
-
 FOLDER
-/.todo/archive/
+/.todo/src/archive/
 FILE
-/.todo/archive/lists.todo
-
-FOLDER
-/.todo/global/
+/.todo/src/index.todo
 FILE
-/.todo/global/index.todo
-
-FOLDER
-/.todo/global/attachments
+/.todo/src/archive/index.todo
