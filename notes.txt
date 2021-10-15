@@ -1,7 +1,8 @@
 // global todo list in /global/index.todo
 
     // this is a list that is general to the project and can take any "shape" -
-    // you can later use this to "send" todo list items into your project code
+    // you can later use this to "send" todo list items into your project code -
+    // or attach project code, todo items to a general "floating" todo list.
 
     Funny thoughts
         |-| blah blah blah
@@ -23,6 +24,7 @@
                     |-| blah blah blah!
                         'this is a note on the above "archive" list item'
                         & attachements/blah_image.png
+                        code: #ParseTest()
                 |#| list 2
                     |#%| 
                     |-| another example
