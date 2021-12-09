@@ -16,7 +16,5 @@ int main(int argc, char* argv[]) {
 
 	FileManager.Init();
 
-
-
 	return 0;
 }

@@ -5,5 +5,5 @@
 -I/usr/lib64/gcc/x86_64-solus-linux/11/include-fixed
 -I/usr/include
 -I/home/slaterbbx/Documents/code/cpp/todo.cli
--I/home/slaterbbx/Documents/code/cpp/todo.cli/includes
+-I/home/slaterbbx/Documents/code/cpp/todo.cli/include
 -std=c++17

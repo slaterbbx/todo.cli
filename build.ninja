@@ -70,21 +70,21 @@ build cmake_object_order_depends_target_Todo: phony || CMakeFiles/Todo.dir
 build CMakeFiles/Todo.dir/src/Example.cpp.o: CXX_COMPILER__Todo_ /home/slaterbbx/Documents/code/cpp/todo.cli/src/Example.cpp || cmake_object_order_depends_target_Todo
   DEP_FILE = CMakeFiles/Todo.dir/src/Example.cpp.o.d
   FLAGS = -std=gnu++17
-  INCLUDES = -I/home/slaterbbx/Documents/code/cpp/todo.cli/includes -I/home/slaterbbx/Documents/code/cpp/todo.cli/src
+  INCLUDES = -I/home/slaterbbx/Documents/code/cpp/todo.cli/include -I/home/slaterbbx/Documents/code/cpp/todo.cli/src
   OBJECT_DIR = CMakeFiles/Todo.dir
   OBJECT_FILE_DIR = CMakeFiles/Todo.dir/src
 
 build CMakeFiles/Todo.dir/src/FileManager.cpp.o: CXX_COMPILER__Todo_ /home/slaterbbx/Documents/code/cpp/todo.cli/src/FileManager.cpp || cmake_object_order_depends_target_Todo
   DEP_FILE = CMakeFiles/Todo.dir/src/FileManager.cpp.o.d
   FLAGS = -std=gnu++17
-  INCLUDES = -I/home/slaterbbx/Documents/code/cpp/todo.cli/includes -I/home/slaterbbx/Documents/code/cpp/todo.cli/src
+  INCLUDES = -I/home/slaterbbx/Documents/code/cpp/todo.cli/include -I/home/slaterbbx/Documents/code/cpp/todo.cli/src
   OBJECT_DIR = CMakeFiles/Todo.dir
   OBJECT_FILE_DIR = CMakeFiles/Todo.dir/src
 
 build CMakeFiles/Todo.dir/src/Main.cpp.o: CXX_COMPILER__Todo_ /home/slaterbbx/Documents/code/cpp/todo.cli/src/Main.cpp || cmake_object_order_depends_target_Todo
   DEP_FILE = CMakeFiles/Todo.dir/src/Main.cpp.o.d
   FLAGS = -std=gnu++17
-  INCLUDES = -I/home/slaterbbx/Documents/code/cpp/todo.cli/includes -I/home/slaterbbx/Documents/code/cpp/todo.cli/src
+  INCLUDES = -I/home/slaterbbx/Documents/code/cpp/todo.cli/include -I/home/slaterbbx/Documents/code/cpp/todo.cli/src
   OBJECT_DIR = CMakeFiles/Todo.dir
   OBJECT_FILE_DIR = CMakeFiles/Todo.dir/src
 

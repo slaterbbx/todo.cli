@@ -5,7 +5,7 @@
     <File Name="src/Example.cpp"/>
     <File Name="src/Main.cpp"/>
   </VirtualDirectory>
-  <VirtualDirectory Name="includes">
+  <VirtualDirectory Name="include">
     <File Name="includes/FileManager.hpp"/>
   </VirtualDirectory>
   <Description/>
@@ -23,7 +23,7 @@
     <Configuration Name="Debug" CompilerType="GCC" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-std=c++17;-g -Wall" C_Options="" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
-        <IncludePath Value="includes"/>
+        <IncludePath Value="include"/>
       </Compiler>
       <Linker Options="-O0" Required="yes">
         <LibraryPath Value="."/>
