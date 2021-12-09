@@ -1,0 +1,1 @@
+Debug/src_Main.cpp.o Debug/src_Example.cpp.o Debug/src_FileManager.cpp.o

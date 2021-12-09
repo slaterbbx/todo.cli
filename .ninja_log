@@ -1,0 +1,6 @@
+# ninja log v5
+0	21	1639092297903294944	build.ninja	34375d5dfd88db40
+0	386	1639092298294294932	CMakeFiles/Todo.dir/src/Example.cpp.o	8b61bd8476b85120
+1	524	1639092298432294928	CMakeFiles/Todo.dir/src/Main.cpp.o	a23dc2c4bdb00bc1
+1	657	1639092298565294924	CMakeFiles/Todo.dir/src/FileManager.cpp.o	4be275c598e1f9a9
+657	731	1639092298638294922	Todo	1e4120a9df9a1349

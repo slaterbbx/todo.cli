@@ -8,13 +8,15 @@
 //============================================================================
 
 #include <iostream>
-#include "FileManager.h"
-
+#include "FileManager.hpp"
 FileManager FileManager;
+
 
 int main(int argc, char* argv[]) {
 
 	FileManager.Init();
+
+
 
 	return 0;
 }

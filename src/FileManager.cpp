@@ -1,4 +1,4 @@
-#include "FileManager.h"
+#include "FileManager.hpp"
 #include <iostream>
 #include <fstream>
 
@@ -78,15 +78,15 @@ int FileManager::ReadFile(const char* fileName){
 // Initializes todo project tracking files in .todo hidden folder
 int FileManager::Init(){
 
-	std::string confirmation = "no";
+//	std::string confirmation = "no";
 
-	if(FileHandler.FileAuthenticator("./.todo")){
+//	if(FileHandler.FileAuthenticator("./.todo")){
 
 		std::cout << "Project already exists, would you like to delete and re-initialize? [ y / n ]" << std::endl;
-		std::cin >> confirmation;
+//		std::cin >> confirmation;
 
-		if(confirmation == "n" || confirmation == "no"){return false;};
-	};
+//		if(confirmation == "n" || confirmation == "no"){return false;};
+//	};
 
 	//	/.todo
 	//		lists.todo
@@ -97,15 +97,15 @@ int FileManager::Init(){
 	//		global
 	//			index.todo
 	//			/attachments
-
-	std::string buildFile = "build.txt";
-
-	std::string folderStructure[5] = {"/todo/", "/todo/src/", "/todo/archive/", "/todo/global/", "/todo/global/attachments/"};
-	std::string files[4] = {"/todo/lists.todo", "/todo/src/lists.todo", "/todo/archive/lists.todo", "/todo/global/index.todo"};
-
-	int arrLength = sizeof(folderStructure)/sizeof(folderStructure[0]);
-
-	std::cout << arrLength << std::endl;
+//
+//	std::string buildFile = "build.txt";
+//
+//	std::string folderStructure[5] = {"/todo/", "/todo/src/", "/todo/archive/", "/todo/global/", "/todo/global/attachments/"};
+//	std::string files[4] = {"/todo/lists.todo", "/todo/src/lists.todo", "/todo/archive/lists.todo", "/todo/global/index.todo"};
+//
+//	int arrLength = sizeof(folderStructure)/sizeof(folderStructure[0]);
+//
+//	std::cout << arrLength << std::endl;
 
 
 //	for(i = 0; i <= arrLength; i++){
