@@ -2,3 +2,6 @@
 /Debug/
 /Binaries/
 /CMakeFiles/
+
+# files
+.codelite/todo_cli-god.tags
