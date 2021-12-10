@@ -6,7 +6,7 @@
     <File Name="src/Main.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
-    <File Name="includes/FileManager.hpp"/>
+    <File Name="include/FileManager.hpp"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
