@@ -20,3 +20,5 @@ The goal is to create a CLI that integrates with a projects codebase to handle "
 recent update was to change the IDE I was using for the project and add a CMakeLists.txt file for building the production version with Ninja.
 - to build, install Ninja and run the command ninja from the project root folder
 - all IDE files for codelite are included ( debug only )
+
+#### Hire me to finish this.
