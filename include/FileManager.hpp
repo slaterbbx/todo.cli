@@ -3,6 +3,9 @@
 #include <filesystem>
 
 class FileManager {
+	
+	// NOTE: we need to check filetype .cpp etc to know the comment // tags to ignore when seeking our custom # markdown ie. | | or |x| etc... used after the filetype comment markdown, this reduces our markdown required ie. less typing
+	// BONUS THOUGHT: use # hashtag to innitiate a todo item instead of | | because its easier to type for the user. This only works if it is after a |#|Group designator, "Group designators" are used to set markdown locations to attach todo items to. Filenames are automatically attached to Group designators for "scoping" purposes and tree building.
 
 public:
 
@@ -21,7 +24,9 @@ public:
 	void ListItems(); // ( -ls ) or ( -ls [1] ) "[] means optional"
 	
 	// method that adds todo list items
-	void AddItem();
+	// needs to search files for markdown that matchs "markdown.tag" option
+	// all files are parsed to find markdown.tag location similar to html "#" selector
+	void AddItem(); // $todo add [markdown.tag] 'new thing todo'
 	
 	// method that removes todo list items
 	void RemoveItem();
