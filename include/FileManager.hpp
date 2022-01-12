@@ -19,11 +19,15 @@ public:
 	// |-| function that takes commands for date ranges to show archived todo items ( date range / specific / or all archives )
 
 	void ListItems(); // ( -ls ) or ( -ls [1] ) "[] means optional"
+	
 	// method that adds todo list items
+	
 	void AddItem();
 	// method that removes todo list items
+	
 	void RemoveItem();
 	// method that handles moving ( cmd: 'mv' ) todo list items up / down
+	
 	void MoveItem();
 
 	// Can open a very specific line of a file ( line # and file location kept in lists.todo )
@@ -35,6 +39,7 @@ public:
 
 	// Used to attach one "list" "grouping" to another or a List item to another group or item
 	void Attach();
+	
 	// used to expand out one layer as a list or an item
 	void Eject();
 
@@ -42,8 +47,11 @@ public:
 	// ----------------------------------------------------------------------------------
 	// method that checks file existence ( list.todo )
 	bool FileAuthenticator(const char*);
+	
 	// methods that create files and directory
 	int CreateFile(const char*);
+	
+	// need more thought
 	int CreateDirectory(const char*);
 	void Delete(const char*);
 	int ReadFile(const char*);

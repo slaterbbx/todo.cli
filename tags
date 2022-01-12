@@ -1,5 +1,0 @@
-_____fpos64_t_defined	/usr/include/bits/types/__fpos64_t.h	/^#define _____fpos64_t_defined 1$/;"	macro	line:2
-_G_fpos64_t	/usr/include/bits/types/__fpos64_t.h	/^typedef struct _G_fpos64_t$/;"	struct	line:10
-__pos	/usr/include/bits/types/__fpos64_t.h	/^  __off64_t __pos;$/;"	member	line:12	struct:_G_fpos64_t	access:public
-__state	/usr/include/bits/types/__fpos64_t.h	/^  __mbstate_t __state;$/;"	member	line:13	struct:_G_fpos64_t	access:public
-__fpos64_t	/usr/include/bits/types/__fpos64_t.h	/^typedef struct _G_fpos64_t {   __off64_t __pos;   __mbstate_t __state; } __fpos64_t; $/;"	typedef	line:14	typeref:struct:_G_fpos64_t
