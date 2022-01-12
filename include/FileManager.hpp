@@ -21,13 +21,12 @@ public:
 	void ListItems(); // ( -ls ) or ( -ls [1] ) "[] means optional"
 	
 	// method that adds todo list items
-	
 	void AddItem();
+	
 	// method that removes todo list items
-	
 	void RemoveItem();
-	// method that handles moving ( cmd: 'mv' ) todo list items up / down
 	
+	// method that handles moving ( cmd: 'mv' ) todo list items up / down
 	void MoveItem();
 
 	// Can open a very specific line of a file ( line # and file location kept in lists.todo )
@@ -35,6 +34,7 @@ public:
 
 	// - add option to watch git and purge files when they are added to git
 	// NOTE: "purge" means to remove all |x| completed tasks from a file or all project or specific list
+	
 	void Purge();
 
 	// Used to attach one "list" "grouping" to another or a List item to another group or item
