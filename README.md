@@ -10,6 +10,7 @@ Not yet functioning, still in the planning stages. Stay tuned.
 - Simple CLI interface for a CLI / GUI todo list app ( cross team project managment )
 - Possible plugins for monday.com or similar
 - GUI version will be created in React / Electron ( pc / mac / linux ) and React Native for Android / ios devices.
+- Node Package for Windows users / Web developers ( CLI )
 - Managed using a combination of files and git
 - Live backend database sync with GUI payed service / free personal or self hosting
 
