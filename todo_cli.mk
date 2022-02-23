@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Debug
+## Release
 ProjectName            :=todo_cli
-ConfigurationName      :=Debug
-WorkspacePath          :=/home/slaterbbx/Documents/code/cpp/todo.cli
-ProjectPath            :=/home/slaterbbx/Documents/code/cpp/todo.cli
+ConfigurationName      :=Release
+WorkspacePath          :=/home/slaterbbx/Documents/code/todo.cli
+ProjectPath            :=/home/slaterbbx/Documents/code/todo.cli
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=GOD
-Date                   :=12/01/22
+User                   :=Kyle Gallagher
+Date                   :=23/02/22
 CodeLitePath           :=/home/slaterbbx/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix) 
 
 
 
@@ -91,23 +91,29 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix): src/Main.cpp
+$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix): src/FileManager.cpp $(IntermediateDirectory)/src_FileManager.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/todo.cli/src/FileManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_FileManager.cpp$(DependSuffix): src/FileManager.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_FileManager.cpp$(DependSuffix) -MM src/FileManager.cpp
+
+$(IntermediateDirectory)/src_FileManager.cpp$(PreprocessSuffix): src/FileManager.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_FileManager.cpp$(PreprocessSuffix) src/FileManager.cpp
+
+$(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix): src/Main.cpp $(IntermediateDirectory)/src_Main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/todo.cli/src/Main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Main.cpp$(DependSuffix): src/Main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Main.cpp$(DependSuffix) -MM src/Main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/todo.cli/src/Main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Main.cpp$(ObjectSuffix) $(IncludePath)
+
 $(IntermediateDirectory)/src_Main.cpp$(PreprocessSuffix): src/Main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Main.cpp$(PreprocessSuffix) src/Main.cpp
 
-$(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix): src/Example.cpp
+$(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix): src/Example.cpp $(IntermediateDirectory)/src_Example.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/todo.cli/src/Example.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Example.cpp$(DependSuffix): src/Example.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Example.cpp$(DependSuffix) -MM src/Example.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/todo.cli/src/Example.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Example.cpp$(ObjectSuffix) $(IncludePath)
+
 $(IntermediateDirectory)/src_Example.cpp$(PreprocessSuffix): src/Example.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Example.cpp$(PreprocessSuffix) src/Example.cpp
-
-$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix): src/FileManager.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_FileManager.cpp$(DependSuffix) -MM src/FileManager.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/slaterbbx/Documents/code/cpp/todo.cli/src/FileManager.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_FileManager.cpp$(PreprocessSuffix): src/FileManager.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_FileManager.cpp$(PreprocessSuffix) src/FileManager.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

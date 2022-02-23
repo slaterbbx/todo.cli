@@ -1,9 +1,0 @@
--I/usr/include/c++/11
--I/usr/include/c++/11/x86_64-solus-linux
--I/usr/include/c++/11/backward
--I/usr/lib64/gcc/x86_64-solus-linux/11/include
--I/usr/lib64/gcc/x86_64-solus-linux/11/include-fixed
--I/usr/include
--I/home/slaterbbx/Documents/code/cpp/todo.cli
--I/home/slaterbbx/Documents/code/cpp/todo.cli/include
--std=c++17
