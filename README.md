@@ -9,6 +9,7 @@ Not yet functioning, still in the planning stages. Stay tuned.
 #### Work in progress CLI for a GUI project managment system thats integrated with Git and project files
 - Simple CLI interface for a CLI / GUI todo list app ( cross team project managment )
 - Possible plugins for monday.com or similar
+- vscode plugin / codelite plugin / ms studio plugin for syntax highlight primarily
 - GUI version will be created in React / Electron ( pc / mac / linux ) and React Native for Android / ios devices.
 - Node Package for Windows users / Web developers ( CLI )
 - Managed using a combination of files and git
